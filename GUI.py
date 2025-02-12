@@ -49,5 +49,23 @@ class calculator:
                 messagebox.showerror("Error", "Invalid Expression")
                 self.expression = ""
         elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "Log", "ln" "sqrt", "pi"]:
-            
+            self.expression += f"math.{button_text}("
+        elif button_text == "^":
+            self.expression += "**"
+        elif button_text == "√":
+            self.expression += "math.sqrt("
+        elif button_text == "pi":
+            self.expression += "math.pi"
+        elif button_text == "Exit":
+            self.root.quit()
+        else:
+            self.expression += button_text
+        
+        self.entry_var.set(self.expression)
+
+# Run the Calculator
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = calculator(root)
+    root.mainloop()
                 
