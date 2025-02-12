@@ -13,7 +13,7 @@ class calculator:
         self.root.resizeable(False, False)
         
         self.expression = ""
-        self.entry.var = tk.StringVar()
+        self.entry_var = tk.StringVar()
         self.entry =tk.Entry(root, textvariable=self.entry_var, font=("Arial", 20), bd=10, relief=tk.RIDGE, justify='right')
         self.entry.grid(row=0, column=0, columnspan=5, ipadx=8, ipady=15)
         
