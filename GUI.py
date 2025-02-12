@@ -9,8 +9,7 @@ class calculator:
     def __init__(self, root):
         self.root = root
         self.root.title("scientific calculator")
-        self.root.geometry("400x600")
-        self.root.resizeable(False, False)
+        self.root.geometry("500x700")
         
         self.expression = ""
         self.entry_var = tk.StringVar()
