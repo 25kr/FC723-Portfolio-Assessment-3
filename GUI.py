@@ -35,3 +35,19 @@ class calculator:
             btn = tk.Button(self.root, text=text, font=("Arial", 14), bd=5, width=6, height=2,
                             command=lambda t=text: self.on_button_click(t))
             btn.grid(row=row, column=col, padx=5, pady=5)
+
+    def on_button_click(self, button_text):
+        #Handles all button click events
+        if button_text == "C":
+            self.expression = ""
+        elif button_text == "DEL":
+            self.expression = self.expression[:-1]
+        elif button_text == "=":
+            try:
+                self.expression = str(eval(self.expression))
+            except Exception:
+                messagebox.showerror("Error", "Invalid Expression")
+                self.expression = ""
+        elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "Log", "ln" "sqrt", "pi"]:
+            
+                
