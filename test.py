@@ -39,6 +39,9 @@ class calculator:
         elif button_text == "=":
             try:
                 self.expression = str(eval(self.expression, {"M": M}))
+                                                                            # eval(expression, global), use eval to execute all math
+                                                                            # The dictionary {"M": M} maps the string "M" to the MathCore class (aliased as M).
+                                                                            # This allows the expression to use M.sin(6) to call MathCore.sin(6).
             except Exception:
                 messagebox.showerror("Error", "Invalid Expression")
                 self.expression = ""
