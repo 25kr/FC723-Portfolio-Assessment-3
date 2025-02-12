@@ -49,6 +49,21 @@ class MathCore:
 		return math.sqrt(a)
 	
 	@staticmethod
-	def square(a: float) -> float:
-		return a**2
+	def square(a: float, b: float) -> float:
+		return a**b
 	
+	@staticmethod
+	def log(a: float) -> float:
+		return math.log(a)
+	
+	@staticmethod
+	def ln(a: float) -> float:
+		return math.log(a, base = math.e)
+	
+	@staticmethod
+	def pi() -> float:
+		return math.pi
+	
+	@staticmethod
+	def mod(a: float, b: float) -> float:
+		return a % b
