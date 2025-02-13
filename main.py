@@ -54,11 +54,11 @@ class MathCore:
 	
 	@staticmethod
 	def log(a: float) -> float:                     #log a
-		return math.log(a)
+		return math.log10(a)
 	
 	@staticmethod
 	def ln(a: float) -> float:                      # ln a
-		return math.log(a, base = math.e)
+		return math.log(a, math.e)
 	
 	@staticmethod
 	def pi() -> float:                              #3.1415926...
