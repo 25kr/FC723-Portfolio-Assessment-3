@@ -27,7 +27,7 @@ class calculator:
             ('0', 4, 0), ('.', 4, 1), ('=', 4, 2), ('+', 4, 3), ('DEL', 4, 4),
             ('sin', 5, 0), ('cos', 5, 1), ('tan', 5, 2), ('log', 5, 3), ('ln', 5, 4),
             ('asin', 6, 0), ('acos', 6, 1), ('atan', 6, 2), ('(', 6, 3), (')', 6, 4),
-            ('pi', 7, 0), ('%', 7, 1), ('Exit', 7, 2)
+            ('π', 7, 0), ('%', 7, 1), ('Exit', 7, 2)
             ]
         
         for (text, row, col) in buttons:
@@ -47,8 +47,10 @@ class calculator:
             except Exception:
                 messagebox.showerror("Error", "Invalid Expression")
                 self.expression = ""
-        elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "Log", "ln" "sqrt", "pi"]:
+        elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "Log", "ln" "sqrt"]:
             self.expression += f"math.{button_text}("
+        elif button_text == "pi":
+            self.expression += f"M.pi()"
         elif button_text == "^":
             self.expression += "**"
         elif button_text == "√":
