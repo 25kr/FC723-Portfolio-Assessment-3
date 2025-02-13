@@ -45,8 +45,10 @@ class calculator:
             except Exception:
                 messagebox.showerror("Error", "Invalid Expression")
                 self.expression = ""
-        elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "log", "ln", "sqrt", "pi"]:
+        elif button_text in ["sin", "cos", "tan", "asin", "acos", "atan", "log", "ln", "sqrt"]:
             self.expression += f"M.{button_text}("
+        elif button_text == "pi":
+            self.expression += f"M.pi()"
         elif button_text == "^":
             self.expression += "**"
         elif button_text == "√":
